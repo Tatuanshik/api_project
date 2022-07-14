@@ -6,8 +6,8 @@ from posts.models import Comment, Group, Post
 from .permissions import IsAuthorOrReadOnly
 from .serializers import (CommentSerializer, FollowSerializer,
                           GroupSerializer, PostSerializer)
-                          
-                          
+
+
 class PostViewSet(viewsets.ModelViewSet):
     permission_classes = [
         IsAuthorOrReadOnly,
