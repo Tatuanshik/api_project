@@ -49,16 +49,16 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = GroupSerializer
 
 
-class CreateListViewSet(mixins.CreateModelMixin, 
-                            mixins.ListModelMixin,
-                            viewsets.GenericViewSet):
+class CreateListViewSet(mixins.CreateModelMixin,
+                        mixins.ListModelMixin,
+                        viewsets.GenericViewSet):
 
     pass
 
 
 class FollowViewSet(CreateListViewSet):
-    permission_classes = [ 
-        permissions.IsAuthenticated 
+    permission_classes = [
+        permissions.IsAuthenticated
     ]
     serializer_class = FollowSerializer
     filter_backends = (filters.SearchFilter,)
